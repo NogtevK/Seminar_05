@@ -19,18 +19,19 @@ for (int i = 0; i < mass.Length; i++)
 }
 Print(mass);
 
-int find = 4;
+Console.WriteLine("Введите искомое число в массиве ");
+int find = int.Parse(Console.ReadLine());
 int index = 0;
 while (index < mass.Length)
 {
     if (mass[index] == find)
     {
-        Console.WriteLine(find + " YES, index="+ index);
+        Console.WriteLine(find + " Элемент найден, index элемента :"+ index);
         break;
     }
     else if (index == mass.Length - 1)
     {
-        Console.WriteLine("NO");
+        Console.WriteLine("Элемент не найден");
     }
     index++;
 }
