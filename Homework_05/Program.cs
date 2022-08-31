@@ -4,7 +4,7 @@
 массиве.
 [345, 897, 568, 234] -> 2 */
 
-void Print(int[] arr)
+/* void Print(int[] arr)
 {
     for (int i = 0; i < arr.Length; i++)
     {
@@ -34,7 +34,7 @@ for (int i = 0; i < mass.Length; i++)
     }
 }
 Console.WriteLine("Четных чисел: " + count);
-
+ */
 ////////////////////////////////////////////////////////////////////
 /* Задача 36: Задайте одномерный массив, заполненный
 случайными числами. Найдите сумму элементов, стоящих
@@ -42,6 +42,30 @@ Console.WriteLine("Четных чисел: " + count);
 [3, 7, 23, 12] -> 19
 [-4, -6, 89, 6] -> 0 */
 
+void Print(int[] arr)
+{
+    for (int i = 0; i < arr.Length; i++)
+    {
+        Console.Write(arr[i] + ", ");
+    }
+    Console.WriteLine();
+}
+
+int[] mass = new int[6];
+for (int i = 0; i < mass.Length; i++)
+{
+    mass[i] = new Random().Next(-10, 10);
+}
+Print(mass);
+Console.WriteLine();
+
+int sumPos = 0;
+for (int i = 1; i < mass.Length; i+=2)
+{
+    sumPos+=mass[i];
+}
+Console.WriteLine("Сумма элементов равна: "+sumPos);
+Console.WriteLine();
 /////////////////////////////////////////////////////////////////////////////
 /* Задача 38: Задайте массив вещественных чисел. Найдите
 разницу между максимальным и минимальным
