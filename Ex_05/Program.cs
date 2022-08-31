@@ -21,9 +21,20 @@ for (int i = 0; i < mass.Length; i++)
 Print(mass);
 Console.WriteLine();
 
-int j = 1;
-for (int i = 0; i < mass.Length; i++)
+int j = 0;
+int[] arr = new int[(mass.Length + 1) / 2];
+arr[arr.Length - 1] = mass[mass.Length / 2];
+
+while (j < mass.Length / 2)
 {
-    j = mass[i] * mass[mass.Length - i - 1];
-    Console.Write(j + ", ");
+    arr[j] = mass[j] * mass[mass.Length - j - 1];
+    j++;
 }
+Print(arr);
+
+
+
+
+
+
+
