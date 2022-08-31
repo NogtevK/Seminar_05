@@ -4,6 +4,37 @@
 массиве.
 [345, 897, 568, 234] -> 2 */
 
+void Print(int[] arr)
+{
+    for (int i = 0; i < arr.Length; i++)
+    {
+        Console.Write(arr[i] + ", ");
+    }
+    Console.WriteLine();
+}
+
+int[] mass = new int[7];
+for (int i = 0; i < mass.Length; i++)
+{
+    mass[i] = new Random().Next(100, 1000);
+}
+Print(mass);
+Console.WriteLine();
+
+int count = 0;
+for (int i = 0; i < mass.Length; i++)
+{
+    if (mass[i] % 2 == 0)
+    {
+        count++;
+    }
+    else
+    {
+        i++;
+    }
+}
+Console.WriteLine("Четных чисел: " + count);
+
 ////////////////////////////////////////////////////////////////////
 /* Задача 36: Задайте одномерный массив, заполненный
 случайными числами. Найдите сумму элементов, стоящих
